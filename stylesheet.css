@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6vh;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.background-box {
+    
+
+    width: 100vw; /* vw : hoeveelheid van beschikbare scherm */
+    min-height: 80vh; 
+    background-image: url('sources/Header_IMG1.JPEG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+    /* https://www.w3schools.com/css/css_background.asp */
+    /* https://www.w3schools.com/css/css_boxmodel.asp */
+
+    display: flex;
+    text-align: center;
+    justify-content: center;  /* Horizontaal centreren */
+    align-items: center;      /* Verticaal centreren */
+}
+
+.title-box {
+    position: relative;
+    
+}
