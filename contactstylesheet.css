@@ -1,0 +1,353 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    h1 {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.7em;
+        font-weight: bold;
+        text-align: center;
+        color: white;    
+    }
+    
+    h2 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.3em;
+        font-weight: lighter;
+        font-style: italic;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        h1 {
+            font-size: 4vh;
+        }
+
+        h2 {
+            font-size: 2.5vh;
+        }
+    }
+
+}
+
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo-box {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 10%;
+
+    /* Weergeven dat logo klikbaar is */
+    cursor: pointer;
+}
+.logo-box img { 
+    width: 100%;
+    height: auto;
+    @media only screen and (max-width: 600px) {
+        width: 175%;
+    }
+}
+
+/* instellingen background afbeelding */
+.background-box {   
+    width: 100%;
+    min-height: 80vh; 
+    background-image: url('../sources/StadHeuvelAfbeelding.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+    
+    /* https://www.w3schools.com/css/css_background.asp */
+    /* https://www.w3schools.com/css/css_boxmodel.asp */
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title en ondertitel */
+.title-box {
+    position: relative;
+}
+
+/* Navigatie */
+.nav-container {
+    position: absolute;
+    top: 5%;
+    display: flex;
+    gap: 1vw;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.nav-button {
+    background-color: #04aa6d00;
+    border: 3px solid rgb(255, 255, 255);
+    color: white;
+    padding: 1.0vh 2.5vw;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 1px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* Animatie navigatie knoppen */
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.31);
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-button {
+        font-size: 2.65vw;
+    }
+    .nav-container {
+        top: 10%;
+        gap: 0.5vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .nav-button {
+        font-size: 1.2vw;
+    }
+    .nav-container {
+        top: 5%;
+        gap: 0.5vw;
+    }
+}
+
+/* Over mij gedeelte */
+section {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.border-box {
+    display: flex;
+    background-color: rgb(107 209 147);
+    margin: 100px;
+    top: 12px;
+    border: 12px solid rgb(107 209 147);
+    border-radius: 12px ;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+
+    padding: 20px;
+}
+
+article {
+    text-align: center;
+    align-items: row;
+    display: flex;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .material-symbols-outlined {
+        position: relative;
+        vertical-align: middle;
+        top: -3px;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+    }
+    a {
+        justify-content: space-between;
+        color: rgb(0, 0, 0);
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 2em;
+        text-align: center;
+    }
+}
+
+.title-box-article {
+    h2 {
+        color: rgb(0, 0, 0);
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 2%;
+        padding: 0;
+    }
+    
+}
+
+.ParentSocials {
+    display: flex;
+    flex: 4;
+    align-items: row;
+    justify-content: center;
+}
+
+.Socials {
+    width: 100%;
+
+    .leftimage {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .rightimage {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    img {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .title-box-article {
+        h2 {
+            font-size: 1.5em;
+        }
+    }
+    .border-box {
+        margin: 30px;
+    }
+
+    article {
+        flex-direction: column;
+        vertical-align: bottom;
+        justify-content: center;
+
+        a {
+            font-size: 1em;
+            vertical-align: bottom;
+        }
+
+        .material-symbols-outlined {
+            font-size: 15px;
+            vertical-align: bottom;
+        }
+    }
+
+    .ParentSocials {
+        flex-direction: column;
+    }
+
+    .Socials {
+        display: flow-root;
+        
+        flex-direction: column;
+        img {
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        a {
+            justify-content: center;
+            display: grid;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+/* Footer gedeelte */
+#footerlogo {
+    height: 60%;
+    width: 60%; 
+}
+
+footer {
+    background-color: rgb(57, 57, 57);
+    padding: 5% 15% 1% 15%;
+}
+
+.footerdiv {
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a, p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.7em;
+        color: rgb(255, 255, 255);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .footerdiv{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        gap: 20px;
+    }  
+
+    #footerlogo {
+        height: 30%;
+        width: 0%;
+        
+        cursor: pointer;
+    }
+
+    .Copyright {
+        padding-top: 20%;
+        font-size: 0.75em;
+    }
+}
+ 
+.footeraside {
+    gap: 10px;
+    display: flex;
+    flex: 0 0 25%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    color: rgb(255, 255, 255);
+
+    color: white;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.Copyright {
+    text-align: center;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: rgb(57, 57, 57);
+    padding-top: 4%;
+    color: white;
+
+    p {
+        font-size: 0.75em;
+    }
+    
+}
